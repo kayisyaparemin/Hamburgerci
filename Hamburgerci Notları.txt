@@ -1,0 +1,10 @@
+3 class, 1 enum var
+
+Classlar: Sipariş,Menü,Sos
+Enum: Boyut
+
+Menü: Adı,Fiyatı
+Sos: Adı Fiyatı
+Sipariş: Menu,Boyut,Sos Listesi,Adet,Tutar özellikleri var ve Hesapla()ve ToString() metodu var.
+Hesapla metodunda orta boy seçili ise %10, büyük boy seçili ise %25 toplam tutara ekleme yapsın.
+IsMdıForm içerisine child formlar oluşturma ve bu formların boyutlarına göre mdiformun şekillenmesi
