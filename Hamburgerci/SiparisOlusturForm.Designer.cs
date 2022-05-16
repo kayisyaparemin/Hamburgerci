@@ -99,7 +99,9 @@
             // 
             // flpEkstralar
             // 
+            this.flpEkstralar.AutoScroll = true;
             this.flpEkstralar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpEkstralar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpEkstralar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.flpEkstralar.Location = new System.Drawing.Point(3, 28);
             this.flpEkstralar.Name = "flpEkstralar";

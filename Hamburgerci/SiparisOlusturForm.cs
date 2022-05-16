@@ -133,7 +133,6 @@ namespace Hamburgerci
                 );
             if (dr == DialogResult.Yes)
             {
-                KontrolTemizle();
                 lbxSiparisler.Items.Clear();
                 lblTutar.Text = "0";
                 btnSiparişTamamla.Enabled = false;

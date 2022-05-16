@@ -21,10 +21,7 @@ namespace Hamburgerci
         {
             if (txtEkleSosAdi.Text.Length > 0)
             {
-                //Aynı sos ismi girilmesin, girilen sos tam gözükmüyor
-                Sos yeniSos = new Sos();
-                yeniSos.Ad = txtEkleSosAdi.Text;
-                yeniSos.Fiyat = nudEkleSosFiyati.Value;
+                Sos yeniSos = new Sos() { Ad = txtEkleSosAdi.Text, Fiyat = nudEkleSosFiyati.Value };
                 SiparisOlusturForm.Soslar.Add(yeniSos);
                 MessageBox.Show("Extra Malzeme Kaydedildi!");
             }

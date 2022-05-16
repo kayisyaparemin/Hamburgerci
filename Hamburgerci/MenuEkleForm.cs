@@ -22,7 +22,6 @@ namespace Hamburgerci
         {
             if (txtEkleMenuAdi.Text.Length > 0)
             {
-                //aynı menü eklenmesin ve menü fiyatı 0 olamasın
                 Menu yeniMenu = new Menu();
                 yeniMenu.Ad = txtEkleMenuAdi.Text;
                 yeniMenu.Fiyat = nudEklEMenuFiyati.Value;

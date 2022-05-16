@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boyut.cs" />
+    <Compile Include="Fonksiyon.cs" />
     <Compile Include="MenuEkleForm.cs">
       <SubType>Form</SubType>
     </Compile>
