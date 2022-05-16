@@ -12,7 +12,7 @@ namespace Hamburgerci
 {
     public partial class SiparisOlusturForm : Form
     {
-        
+
         public static List<Siparis> Siparisler = new List<Siparis>();
         public static List<Siparis> TumSiparisler = new List<Siparis>();
         decimal toplamFiyat = 0;
@@ -27,7 +27,7 @@ namespace Hamburgerci
             new Menu() { Ad = "Barbeko Burger", Fiyat = 49.99m },
             new Menu() { Ad = "Etli Barbekü Brioche", Fiyat = 69.99m }
         };
-        public static List<Sos> Soslar = new List<Sos>() 
+        public static List<Sos> Soslar = new List<Sos>()
         {
             new Sos() { Ad = "Ketçap", Fiyat = 0 },
             new Sos() { Ad = "Mayonez", Fiyat = 0 },
@@ -91,7 +91,7 @@ namespace Hamburgerci
 
             KontrolTemizle();
 
-            
+
         }
 
         private void TutarHesapla()
@@ -115,23 +115,51 @@ namespace Hamburgerci
             //Soslar panele ekleniyor.
             foreach (var item in Soslar)
             {
-                flpEkstralar.Controls.Add(new CheckBox() {Text = item.Ad});
+                flpEkstralar.Controls.Add(new CheckBox() { Text = item.Ad });
             }
             if (lbxSiparisler.Items.Count == 0)
             {
-                btnSiparişTamamla.Enabled = false;  
+                btnSiparişTamamla.Enabled = false;
             }
         }
 
         private void btnSiparişTamamla_Click(object sender, EventArgs e)
         {
-            KontrolTemizle();
-            lbxSiparisler.Items.Clear();
-            lblTutar.Text = "0";
-            btnSiparişTamamla.Enabled = false;
-            toplamFiyat = 0;
-            Siparisler.Clear();
-            MessageBox.Show("Siparişiniz alındı!");
+
+            var dr = MessageBox.Show(
+                $"Siparişlerinizin toplam tutarı {Siparisler.Sum(x => x.Tutar)}₺.Onaylıyor musunuz?",
+                "Onay",
+                MessageBoxButtons.YesNo
+                );
+            if (dr == DialogResult.Yes)
+            {
+                KontrolTemizle();
+                lbxSiparisler.Items.Clear();
+                lblTutar.Text = "0";
+                btnSiparişTamamla.Enabled = false;
+                toplamFiyat = 0;
+                Siparisler.Clear();
+                MessageBox.Show("Siparişiniz alındı!");
+            }
+            else
+            {
+                var dr2 = MessageBox.Show("Siparişler sıfırlansın mı?","Onay",MessageBoxButtons.YesNo);
+                if (dr2 == DialogResult.Yes)
+                {
+                    KontrolTemizle();
+                    lbxSiparisler.Items.Clear();
+                    lblTutar.Text = "0";
+                    btnSiparişTamamla.Enabled = false;
+                    toplamFiyat = 0;
+                    Siparisler.Clear();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+
         }
         private void KontrolTemizle()
         {
@@ -143,7 +171,7 @@ namespace Hamburgerci
             rbKucuk.Checked = true;
             rbOrta.Checked = false;
             cmbMenuler.SelectedIndex = 0;
-            
+
         }
     }
 }
