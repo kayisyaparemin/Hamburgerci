@@ -18,14 +18,14 @@ namespace Hamburgerci
         decimal toplamFiyat = 0;
         public static List<Menu> Menuler = new List<Menu>()
         {
-            new Menu() { Ad = "Whopper Menü", Fiyat = 62.99m },
-            new Menu() { Ad = "Double Whopper Menü", Fiyat = 58.99m },
-            new Menu() { Ad = "King Beef Burger Menü", Fiyat = 84.99m },
-            new Menu() { Ad = "Plant Whopper Menü", Fiyat = 62.99m },
-            new Menu() { Ad = "BK Crispy Chicken Menü", Fiyat = 44.99m },
-            new Menu() { Ad = "BK Kral Burger Menü", Fiyat = 74.99m },
-            new Menu() { Ad = "Barbeko Burger Menü", Fiyat = 49.99m },
-            new Menu() { Ad = "Etli Barbekü Brioche Menü", Fiyat = 69.99m }
+            new Menu() { Ad = "Whopper", Fiyat = 62.99m },
+            new Menu() { Ad = "Double Whopper", Fiyat = 58.99m },
+            new Menu() { Ad = "King Beef Burger", Fiyat = 84.99m },
+            new Menu() { Ad = "Plant Whopper", Fiyat = 62.99m },
+            new Menu() { Ad = "BK Crispy Chicken", Fiyat = 44.99m },
+            new Menu() { Ad = "BK Kral Burger", Fiyat = 74.99m },
+            new Menu() { Ad = "Barbeko Burger", Fiyat = 49.99m },
+            new Menu() { Ad = "Etli Barbekü Brioche", Fiyat = 69.99m }
         };
         public static List<Sos> Soslar = new List<Sos>() 
         {

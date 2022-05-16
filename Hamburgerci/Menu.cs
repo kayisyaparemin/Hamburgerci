@@ -13,7 +13,7 @@ namespace Hamburgerci
 
         public override string ToString()
         {
-            return $"{Ad} {Fiyat} ₺";
+            return $"{Ad} Menü {Fiyat} ₺";
         }
     }
 }

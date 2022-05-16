@@ -22,9 +22,18 @@ namespace Hamburgerci
         {
             if (txtEkleMenuAdi.Text.Length > 0)
             {
+                //aynı menü eklenmesin ve menü fiyatı 0 olamasın
                 Menu yeniMenu = new Menu();
                 yeniMenu.Ad = txtEkleMenuAdi.Text;
                 yeniMenu.Fiyat = nudEklEMenuFiyati.Value;
+                foreach (Menu item in SiparisOlusturForm.Menuler)
+                {
+                    if (item.Ad == txtEkleMenuAdi.Text || item.Ad.ToLower() == txtEkleMenuAdi.Text || item.Ad.Trim() == txtEkleMenuAdi.Text)
+                    {
+                        MessageBox.Show("Bu menü zaten mevcuttur!");
+                        return;
+                    }
+                }
                 SiparisOlusturForm.Menuler.Add(yeniMenu);
                 MessageBox.Show("Menü Kaydedildi!");
             }

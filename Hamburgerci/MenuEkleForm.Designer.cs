@@ -39,7 +39,7 @@
             // 
             // txtEkleMenuAdi
             // 
-            this.txtEkleMenuAdi.Location = new System.Drawing.Point(141, 85);
+            this.txtEkleMenuAdi.Location = new System.Drawing.Point(110, 82);
             this.txtEkleMenuAdi.Name = "txtEkleMenuAdi";
             this.txtEkleMenuAdi.Size = new System.Drawing.Size(252, 26);
             this.txtEkleMenuAdi.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(51, 33);
+            this.label1.Location = new System.Drawing.Point(20, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 20);
             this.label1.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(51, 88);
+            this.label2.Location = new System.Drawing.Point(20, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(83, 137);
+            this.label3.Location = new System.Drawing.Point(52, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             // btnYeniMenuKaydet
             // 
-            this.btnYeniMenuKaydet.Location = new System.Drawing.Point(141, 185);
+            this.btnYeniMenuKaydet.Location = new System.Drawing.Point(110, 182);
             this.btnYeniMenuKaydet.Name = "btnYeniMenuKaydet";
             this.btnYeniMenuKaydet.Size = new System.Drawing.Size(252, 71);
             this.btnYeniMenuKaydet.TabIndex = 3;
@@ -87,16 +87,26 @@
             // nudEklEMenuFiyati
             // 
             this.nudEklEMenuFiyati.DecimalPlaces = 2;
-            this.nudEklEMenuFiyati.Location = new System.Drawing.Point(141, 137);
+            this.nudEklEMenuFiyati.Location = new System.Drawing.Point(110, 134);
+            this.nudEklEMenuFiyati.Minimum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudEklEMenuFiyati.Name = "nudEklEMenuFiyati";
             this.nudEklEMenuFiyati.Size = new System.Drawing.Size(252, 26);
             this.nudEklEMenuFiyati.TabIndex = 4;
+            this.nudEklEMenuFiyati.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             // 
             // MenuEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 292);
+            this.ClientSize = new System.Drawing.Size(392, 284);
             this.Controls.Add(this.nudEklEMenuFiyati);
             this.Controls.Add(this.btnYeniMenuKaydet);
             this.Controls.Add(this.label3);
